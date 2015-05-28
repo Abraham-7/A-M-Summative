@@ -21,10 +21,11 @@ public class PanColour extends JPanel // panel definition
         // the color variable. Look at the BtnColour class which extends JButton
         BtnColour btnRed = new BtnColour("Red", Color.red);
         BtnColour btnBlue = new BtnColour("Blue", Color.blue);
-        BtnColour btnYellow = new BtnColour("Yellow", Color.yellow);
+        BtnColour btnGreen = new BtnColour("Green", Color.green);
         add(btnRed);
         add(btnBlue);
-        add(btnYellow);
+        add(btnGreen);
+        
         class ColourChangeListener implements ActionListener {
 
             public void actionPerformed(ActionEvent event) {
@@ -34,13 +35,18 @@ public class PanColour extends JPanel // panel definition
                 BtnColour btn = (BtnColour) event.getSource();
                 Color c = btn.getColour();
                 
+                if(c.equals(Color.green)){
+                    panDisp.SetBackground();
+                }
+                
+                
             }
         }
         ActionListener colourChangeListener = new ColourChangeListener();
         // all 3 buttons call the same listener
         btnRed.addActionListener(colourChangeListener);
         btnBlue.addActionListener(colourChangeListener);
-        btnYellow.addActionListener(colourChangeListener);
+        btnGreen.addActionListener(colourChangeListener);
 
 
     }/*

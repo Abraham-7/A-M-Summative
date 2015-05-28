@@ -26,7 +26,8 @@ public class PanDisp extends JPanel // panel definition
         // It will be in the CENTRE of PanMain
         nCount = 60;
         timer.start();
-        setBackground(Color.RED);
+       // setBackground(new Color(0,255,0));
+        setBackground(Color.green);
     }
 
     void UpdateLabel(String _sNew) {
@@ -34,6 +35,22 @@ public class PanDisp extends JPanel // panel definition
         lblName.setText(sLabel);
    
     }
+   public void SetBackground() {
+        Color c = null;
+        int nRand = (int)(Math.random()*3)+1;
+        System.out.println(nRand);
+        if(nRand==1){
+            c=Color.blue;
+        }
+        else if(nRand==2){
+            c=Color.red;
+        }
+        else if(nRand==3){
+            c=Color.green;
+        }
+        setBackground(c);
+        
+   }
     ActionListener updateTask = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent evt) {
