@@ -25,11 +25,13 @@ public class PanColour extends JPanel // panel definition
         BtnColour btnGreen = new BtnColour("Green", Color.green);
         BtnColour btnOrange = new BtnColour("Orange", Color.orange);
         BtnColour btnYellow = new BtnColour("Yellow", Color.yellow);
+        BtnColour btnMagenta = new BtnColour("Magenta", Color.magenta);
         add(btnRed);
         add(btnBlue);
         add(btnGreen);
         add(btnOrange);
         add(btnYellow);
+        add(btnMagenta);
 
         class ColourChangeListener implements ActionListener {
 
@@ -49,6 +51,8 @@ public class PanColour extends JPanel // panel definition
                     panDisp.SetBackground(nRand);
                 }else if (c.equals(Color.yellow)) {
                     panDisp.SetBackground(nRand);
+                }else if (c.equals(Color.magenta)) {
+                    panDisp.SetBackground(nRand);
                 }
             }
         }
@@ -59,6 +63,7 @@ public class PanColour extends JPanel // panel definition
         btnGreen.addActionListener(colourChangeListener);
         btnOrange.addActionListener(colourChangeListener);
         btnYellow.addActionListener(colourChangeListener);
+        btnMagenta.addActionListener(colourChangeListener);
 
 
     }

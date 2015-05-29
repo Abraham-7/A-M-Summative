@@ -50,8 +50,8 @@ public class PanDisp extends JPanel // panel definition
             c=Color.orange;
         }else if(nRand==5){
             c=Color.yellow;
-        }else if(nRand==5){
-            c=Color.yellow;
+        }else if(nRand==6){
+            c=Color.magenta;
         }
         setBackground(c);
         
