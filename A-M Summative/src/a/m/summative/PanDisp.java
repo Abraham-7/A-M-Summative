@@ -35,9 +35,8 @@ public class PanDisp extends JPanel // panel definition
         lblName.setText(sLabel);
    
     }
-   public void SetBackground() {
-        Color c = null;
-        int nRand = (int)(Math.random()*3)+1;
+   public void SetBackground(int nRand) {
+        Color c=null;
         System.out.println(nRand);
         if(nRand==1){
             c=Color.blue;

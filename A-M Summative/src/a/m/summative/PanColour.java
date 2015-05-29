@@ -3,6 +3,7 @@
  * and open the template in the editor.
  */
 package a.m.summative;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -25,21 +26,24 @@ public class PanColour extends JPanel // panel definition
         add(btnRed);
         add(btnBlue);
         add(btnGreen);
-        
+
         class ColourChangeListener implements ActionListener {
 
             public void actionPerformed(ActionEvent event) {
                 // I get the source of the click, and then I can find out what color has been assigned 
                 //to that button.   
-             
+                int nRand = (int) (Math.random() * 3) + 1;
                 BtnColour btn = (BtnColour) event.getSource();
                 Color c = btn.getColour();
-                
-                if(c.equals(Color.green)){
-                    panDisp.SetBackground();
+
+                if (c.equals(Color.green)) {
+                    panDisp.SetBackground(nRand);
+
+                } else if (c.equals(Color.red)) {
+                    panDisp.SetBackground(nRand);
+                }else if (c.equals(Color.blue)){
+                     panDisp.SetBackground(nRand);
                 }
-                
-                
             }
         }
         ActionListener colourChangeListener = new ColourChangeListener();
