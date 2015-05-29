@@ -46,6 +46,12 @@ public class PanDisp extends JPanel // panel definition
         }
         else if(nRand==3){
             c=Color.green;
+        }else if(nRand==4){
+            c=Color.orange;
+        }else if(nRand==5){
+            c=Color.yellow;
+        }else if(nRand==5){
+            c=Color.yellow;
         }
         setBackground(c);
         
@@ -53,9 +59,11 @@ public class PanDisp extends JPanel // panel definition
     ActionListener updateTask = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent evt) {
+            if(nCount>0){
             nCount--;
             panOut.UpdateLabel(nCount);
             System.out.println(nCount);
+        }
         }
     };
    
