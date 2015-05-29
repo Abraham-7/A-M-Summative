@@ -37,6 +37,8 @@ public class PanColour extends JPanel // panel definition
                 
                 if(c.equals(Color.green)){
                     panDisp.SetBackground();
+                }else if(!c.equals(Color.green)){
+                    System.out.println("Wrong");//fix this only changes background does not read if it is correct
                 }
                 
                 
