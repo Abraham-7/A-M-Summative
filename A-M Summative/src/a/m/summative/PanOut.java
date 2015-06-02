@@ -22,6 +22,8 @@ public class PanOut extends JPanel // panel definition
         nCount = _nCount;
         sCount = Integer.toString(nCount);
         lblCount.setText(sCount);
+        //Will it work
+        
     }
 }
 
