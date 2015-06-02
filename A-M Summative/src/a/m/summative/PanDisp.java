@@ -17,13 +17,10 @@ public class PanDisp extends JPanel // panel definition
     private JLabel lblName;
     private String sLabel;
     private String sColour;
-
-  
     private int nScore;
     public static int nCount;
-
     Timer timer;
-     //GameOver gameover = new GameOver();
+     PanGameOver pangameover = new PanGameOver();
 
     public PanDisp(PanOut _panOut) {
         panOut = _panOut;
