@@ -17,13 +17,17 @@ public class PanDisp extends JPanel // panel definition
     private JLabel lblName;
     private String sLabel;
     private String sColour;
-    private int nCount;
+
+  
     private int nScore;
+    public static int nCount;
+
     Timer timer;
+     //GameOver gameover = new GameOver();
 
     public PanDisp(PanOut _panOut) {
         panOut = _panOut;
-        timer = new Timer(600, updateTask);
+        timer = new Timer(100, updateTask);
         // this Panel will contain all of the output, therefore called PanDisp for display
         // It will be in the CENTRE of PanMain
         nCount = 60;
@@ -60,22 +64,25 @@ public class PanDisp extends JPanel // panel definition
     ActionListener updateTask = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent evt) {
+
           Color c=(Color.green);
             if (c.equals(Color.green)) {
                 nScore++;
                 System.out.println(nScore + "This is the score!");
                  panOut.UpdateLabel(nScore);
                     System.out.println(nScore);
-                //} 
+               
             }
-                if (nCount > 0) {
-                    nCount--;
-                    panOut.UpdateLabel(nCount);
-                    System.out.println(nCount);
-                }
-            
+            if(nCount>0){
+            nCount--;
+            panOut.UpdateLabel(nCount);
+            System.out.println(nCount);
+        }else if(nCount==0){
+           
+
         }
-    
+    };//if (nCount==0{)
+
     // Allocate a Timer to run updateTask's actionPerformed() after every delay msec
     //timer = new Timer(1000, updateTask).start();
 };

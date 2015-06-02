@@ -41,10 +41,11 @@ public class PanColour extends JPanel // panel definition
             public void actionPerformed(ActionEvent event) {
                 // I get the source of the click, and then I can find out what color has been assigned 
                 //to that button.   
+                
                 int nRand = (int) (Math.random() * 6) + 1;
                 BtnColour btn = (BtnColour) event.getSource();
                 Color c = btn.getColour();
-               
+
                 if (c.equals(Color.green)) {
                   
                     //for (nNum = 1; nNum <6 ; nNum++) {
@@ -65,6 +66,8 @@ public class PanColour extends JPanel // panel definition
                 } else if (c.equals(Color.magenta)) {
                     panDisp.SetBackground(nRand);
                 }
+                    
+                
             }
         }
         ActionListener colourChangeListener = new ColourChangeListener();

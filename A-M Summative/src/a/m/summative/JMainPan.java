@@ -10,6 +10,7 @@ public class JMainPan extends JPanel{
     PanDisp panDisp = new PanDisp(panOut);
     //PanLabelChange panLabelChange = new PanLabelChange(panDisp);
     PanColour panColour = new PanColour(panDisp);
+   
     private PanOut PanOut;
 
     public JMainPan() {
