@@ -10,7 +10,10 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 public class PanScore extends JPanel {
-
+  //btnColour btncolour;
+ // public PanScore(btnColour _btncolour) {
+  //     btnColour = _btncolour;
+  //}
     ActionListener click = new Click();
     JButton btnRed = new JButton("Click");
     JButton btnBlue = new JButton("Click");
@@ -22,8 +25,8 @@ public class PanScore extends JPanel {
     public PanScore() {
         setLayout(new GridLayout(1, 1));
 
-        add(btnColour);
-        btnColour.addActionListener(click);
+      //  add(btnColour);
+      //  btnColour.addActionListener(click);
     }
 
     class Click implements ActionListener {

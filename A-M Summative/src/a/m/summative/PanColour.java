@@ -12,10 +12,12 @@ import java.util.Random;
 
 public class PanColour extends JPanel // panel definition
 {
+    public int nScore, nNum;
 
     PanDisp panDisp;
 
     public PanColour(PanDisp _panDisp) {
+        
         panDisp = _panDisp;
         setLayout(new GridLayout(3, 1));
         // notice now that I created a new BtnColour class that takes the name and 
@@ -32,6 +34,7 @@ public class PanColour extends JPanel // panel definition
         add(btnOrange);
         add(btnYellow);
         add(btnMagenta);
+        
 
         class ColourChangeListener implements ActionListener {
 
@@ -41,17 +44,25 @@ public class PanColour extends JPanel // panel definition
                 int nRand = (int) (Math.random() * 6) + 1;
                 BtnColour btn = (BtnColour) event.getSource();
                 Color c = btn.getColour();
+               
                 if (c.equals(Color.green)) {
-                    panDisp.SetBackground(nRand);
-                } else if (c.equals(Color.red)) {
+                  
+                    //for (nNum = 1; nNum <6 ; nNum++) {
+                      //  System.out.println(nNum + "\t");
+                        nScore++;
+                        System.out.println(nScore + "This is the score!");
+                        //}
+                        panDisp.SetBackground(nRand);
+                        System.out.println("The score is " + nScore);
+                    }  else if (c.equals(Color.red)) {
                     panDisp.SetBackground(nRand);
                 } else if (c.equals(Color.blue)) {
                     panDisp.SetBackground(nRand);
-                }else if (c.equals(Color.orange)) {
+                } else if (c.equals(Color.orange)) {
                     panDisp.SetBackground(nRand);
-                }else if (c.equals(Color.yellow)) {
+                } else if (c.equals(Color.yellow)) {
                     panDisp.SetBackground(nRand);
-                }else if (c.equals(Color.magenta)) {
+                } else if (c.equals(Color.magenta)) {
                     panDisp.SetBackground(nRand);
                 }
             }
