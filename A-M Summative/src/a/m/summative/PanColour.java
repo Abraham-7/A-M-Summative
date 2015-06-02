@@ -47,14 +47,7 @@ public class PanColour extends JPanel // panel definition
                 Color c = btn.getColour();
 
                 if (c.equals(Color.green)) {
-                  
-                    //for (nNum = 1; nNum <6 ; nNum++) {
-                      //  System.out.println(nNum + "\t");
-                        nScore++;
-                        System.out.println(nScore + "This is the score!");
-                        //}
                         panDisp.SetBackground(nRand);
-                        System.out.println("The score is " + nScore);
                     }  else if (c.equals(Color.red)) {
                     panDisp.SetBackground(nRand);
                 } else if (c.equals(Color.blue)) {
