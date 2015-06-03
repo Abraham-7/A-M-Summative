@@ -66,7 +66,7 @@ public class PanDisp extends JPanel // panel definition
             if (c.equals(Color.green)) {
                 nScore++;
                 System.out.println(nScore + "This is the score!");
-                 panOut.UpdateLabel(nScore);
+                 panOut.UpdateLabel1(nScore);
                     System.out.println(nScore);
                
             }
