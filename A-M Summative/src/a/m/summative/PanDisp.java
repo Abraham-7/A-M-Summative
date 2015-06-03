@@ -62,7 +62,6 @@ public class PanDisp extends JPanel // panel definition
             panOut.UpdateLabel(nCount);
             System.out.println(nCount);
         }else if(nCount==0){
-            
            pangameover.setVisible(true);
         }
     };//if (nCount==0{)

@@ -22,6 +22,6 @@ public class JMainPan extends JPanel{
          add(panOut, BorderLayout.EAST);
         add(panColour, BorderLayout.SOUTH);
        // pangameover.setVisible(false);
-       // add(pangameover, BorderLayout.WEST);
+        add(pangameover, BorderLayout.CENTER);
     }
 }
