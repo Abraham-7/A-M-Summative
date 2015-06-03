@@ -6,16 +6,19 @@ import java.awt.event.ActionEvent;
 import java.io.FileReader;
 import java.io.*;
 import java.util.*;
+import javax.swing.ImageIcon;
 public class PanGameOver extends JPanel {
     PanDisp panDisp;
+    
     public PanGameOver() {
+     //   public Image=background;
         if (PanDisp.nCount == 0) {
-            System.out.println("Game over");
+            System.out.println("Game over2");
            PanDisp.nCount=-1;
             }
        
         }
      public void GameScreen(int nCount) throws IOException {
-         Scanner fin = new Scanner(new FileReader("game-over.jpg"));
+         ImageIcon p1 = new ImageIcon("game-over.jpg");
     }
 }
