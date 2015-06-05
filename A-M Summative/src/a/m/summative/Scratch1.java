@@ -18,7 +18,7 @@ public class Scratch1 {
      ImageIcon pic2;
     Timer timer;
      PanGameOver pangameover = new PanGameOver();
-    public PanDisp(PanOut _panOut) {
+    public Scratch1(PanOut _panOut) {
         panOut = _panOut;
         timer = new Timer(600, updateTask);
         // this Panel will contain all of the output, therefore called PanDisp for display
@@ -58,7 +58,7 @@ public class Scratch1 {
             if (c.equals(Color.green)) {
                 nScore++;
                 System.out.println(nScore + "This is the score!");
-                 panOut.UpdateLabel1(nScore);//Score is updated in panel
+                 panOut.UpdateLabel1(nScore);//Score is updated in panel but went up with timer
                     System.out.println(nScore);
             }
             if(nCount>0){
