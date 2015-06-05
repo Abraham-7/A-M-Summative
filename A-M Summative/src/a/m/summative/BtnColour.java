@@ -11,7 +11,7 @@ public class BtnColour extends JButton // panel definition
     private Color c;
     private String sName;
 
-    public BtnColour(String _sName, Color _c) {
+    public BtnColour(String _sName, Color _c) {//c is called the button
         sName = _sName;
         c = _c;
         

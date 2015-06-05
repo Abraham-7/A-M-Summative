@@ -46,7 +46,7 @@ public class PanColour extends JPanel // panel definition
                 BtnColour btn = (BtnColour) event.getSource();
                 Color c = btn.getColour();
 
-                if (c.equals(Color.green)) {
+                if (c.equals(Color.green)) { //sets the background of the panel a certain colour once a button is pressed
                         panDisp.SetBackground(nRand);
                     }  else if (c.equals(Color.red)) {
                     panDisp.SetBackground(nRand);
@@ -64,7 +64,7 @@ public class PanColour extends JPanel // panel definition
             }
         }
         ActionListener colourChangeListener = new ColourChangeListener();
-        // all 3 buttons call the same listener
+        // all 6 buttons call the same listener
         btnRed.addActionListener(colourChangeListener);
         btnBlue.addActionListener(colourChangeListener);
         btnGreen.addActionListener(colourChangeListener);

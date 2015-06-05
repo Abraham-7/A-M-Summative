@@ -30,7 +30,8 @@ public class PanDisp extends JPanel // panel definition
     }
     public void SetBackground(int nRand) {
         Color c = null;
-        System.out.println(nRand);
+        System.out.println(nRand);/*here we have nRand randomizing 6 different colours
+                                    every button click*/
         if (nRand == 1) {
             c = Color.blue;
         } else if (nRand == 2) {
@@ -44,21 +45,23 @@ public class PanDisp extends JPanel // panel definition
         } else if (nRand == 6) {
             c = Color.magenta;
         }
-        setBackground(c);
+        setBackground(c);//set display background to a random colour chosen
     }
     ActionListener updateTask = new ActionListener() {
         @Override
-        public void actionPerformed(ActionEvent evt) {          
+        public void actionPerformed(ActionEvent evt) { /*nCount makes the timer count down from 60 seconds*/         
             if(nCount>0){
             nCount--;
             panOut.UpdateLabel(nCount);
             System.out.println(nCount);
-        }else if(nCount==0){
+        }else if(nCount==0){    //here once the timer hits 0, the file pangameover will be set visable on the display
            pangameover.setVisible(true);
         }
     }//if (nCount==0{)
     };
-ActionListener score = new ActionListener() {
+ActionListener score = new ActionListener() {/*here our score action listener was supposed to update 
+ * the scoreboard by 1 everytime the user would click the button "green"*/
+
     @Override
             public void actionPerformed(ActionEvent e) {
       Color c=(Color.green);

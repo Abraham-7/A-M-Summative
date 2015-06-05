@@ -9,11 +9,11 @@ public class FraMain extends JFrame {
 
     FraMain() {
         JMainPan panMain = new JMainPan();
-        setSize(400, 400);
+        setSize(400, 400);//size of the panel
         setTitle("Empty Frame");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         add(panMain);
-        setVisible(true);
+        setVisible(true);//make the panel visable
 
     }
 }
