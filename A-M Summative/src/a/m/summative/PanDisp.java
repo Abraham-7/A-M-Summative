@@ -49,15 +49,7 @@ public class PanDisp extends JPanel // panel definition
     }
     ActionListener updateTask = new ActionListener() {
         @Override
-        public void actionPerformed(ActionEvent evt) {
-
-          Color c=(Color.green);
-            if (c.equals(Color.green)) {
-                nScore++;
-                System.out.println(nScore + "This is the score!");
-                 panOut.UpdateLabel1(nScore);//Score is updated in panel
-                    System.out.println(nScore);
-            }
+        public void actionPerformed(ActionEvent evt) {          
             if(nCount>0){
             nCount--;
             panOut.UpdateLabel(nCount);
@@ -65,9 +57,24 @@ public class PanDisp extends JPanel // panel definition
         }else if(nCount==0){
            pangameover.setVisible(true);
         }
-    };//if (nCount==0{)
-
+    }//if (nCount==0{)
+    };
+ActionListener score = new ActionListener() {
+    @Override
+            public void actionPerformed(ActionEvent e) {
+      Color c=(Color.green);
+            if (c.equals(Color.green)) {
+                nScore++;
+                System.out.println(nScore + "This is the score!");
+                 panOut.UpdateLabel1(nScore);
+                    System.out.println(nScore);
+}
     // Allocate a Timer to run updateTask's actionPerformed() after every delay msec
     //timer = new Timer(1000, updateTask).start();
-};
+
+            
+             //To change body of generated methods, choose Tools | Templates.
             }
+        };
+            };
+            
