@@ -1,21 +1,24 @@
+//This was our original PanDis
 package a.m.summative;
-import javax.swing.*;
-import java.awt.*;
+import static a.m.summative.PanDisp.nCount;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Random;
-public class PanDisp extends JPanel // panel definition
-{
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.Timer;
+public class Scratch1 {
     PanOut panOut;
     private JLabel lblName;
     private String sLabel;
     private String sColour;
     private int nScore;
-    public static int nCount;
+    private  int nCount;
      ImageIcon pic2;
     Timer timer;
      PanGameOver pangameover = new PanGameOver();
-    public PanDisp(PanOut _panOut) {
+    public Scratch1(PanOut _panOut) {
         panOut = _panOut;
         timer = new Timer(600, updateTask);
         // this Panel will contain all of the output, therefore called PanDisp for display
@@ -31,8 +34,7 @@ public class PanDisp extends JPanel // panel definition
     }
     public void SetBackground(int nRand) {
         Color c = null;
-        System.out.println(nRand);/*here we have nRand randomizing 6 different colours
-                                    every button click*/
+        System.out.println(nRand);
         if (nRand == 1) {
             c = Color.blue;
         } else if (nRand == 2) {
@@ -46,38 +48,30 @@ public class PanDisp extends JPanel // panel definition
         } else if (nRand == 6) {
             c = Color.magenta;    
         }
-        setBackground(c);//set display background to a random colour chosen
+        setBackground(c);
     }
     ActionListener updateTask = new ActionListener() {
         @Override
-        public void actionPerformed(ActionEvent evt) { /*nCount makes the timer count down from 60 seconds*/         
+        public void actionPerformed(ActionEvent evt) {
+
+          Color c=(Color.green);
+            if (c.equals(Color.green)) {
+                nScore++;
+                System.out.println(nScore + "This is the score!");
+                 panOut.UpdateLabel1(nScore);//Score is updated in panel but went up with timer
+                    System.out.println(nScore);
+            }
             if(nCount>0){
             nCount--;
             panOut.UpdateLabel(nCount);
             System.out.println(nCount);
-        }else if(nCount==0){    //here once the timer hits 0, the file pangameover will be set visable on the display
+        }else if(nCount==0){
            pangameover.setVisible(true);
         }
-    }//if (nCount==0{)
-    };
-ActionListener score = new ActionListener() {/*here our score action listener was supposed to update 
- * the scoreboard by 1 everytime the user would click the button "green"*/
+    };//if (nCount==0{)
 
-    @Override
-            public void actionPerformed(ActionEvent e) {
-      Color c=(Color.green);
-            if (c.equals(Color.green)) {
-                nScore++;
-                System.out.println(nScore + "This is the score!");
-                 panOut.UpdateLabel1(nScore);
-                    System.out.println(nScore);
-}
     // Allocate a Timer to run updateTask's actionPerformed() after every delay msec
     //timer = new Timer(1000, updateTask).start();
-
-            
-             //To change body of generated methods, choose Tools | Templates.
+};
             }
-        };
-            };
-            
+
