@@ -1,17 +1,20 @@
+//This was our original PanDis
 package a.m.summative;
-import javax.swing.*;
-import java.awt.*;
+import static a.m.summative.PanDisp.nCount;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Random;
-public class PanDisp extends JPanel // panel definition
-{
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.Timer;
+public class Scratch1 {
     PanOut panOut;
     private JLabel lblName;
     private String sLabel;
     private String sColour;
     private int nScore;
-    public static int nCount;
+    private  int nCount;
      ImageIcon pic2;
     Timer timer;
      PanGameOver pangameover = new PanGameOver();
@@ -71,3 +74,4 @@ public class PanDisp extends JPanel // panel definition
     //timer = new Timer(1000, updateTask).start();
 };
             }
+
